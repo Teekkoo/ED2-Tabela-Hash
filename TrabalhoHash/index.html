@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css">
+    <title>Tabela Hash</title>
+</head>
+<body>
+    <h1>Programa para Tabela Hash</h1>
+    <div class="areaInput">
+        <p>Por favor selecione arquivo que será lido:  <input type="file" id="txtfiletoread" /></p>
+    </div>
+    
+    <h3>Conteúdo do arquivo:</h3>
+    <div class="filecontents">
+        <div id="content01" ></div>
+        <div id="content02" ></div>
+        <div id="content03" ></div>
+    </div>
+    <h3>Status da Tabela Hash:</h3>
+    <div class="filecontents" id="filecontents">
+    </div>
+    <h3>Tabela Hash Completa:</h3>
+    <div class="filecontents" id="filecontentsTable">
+    </div>
+    <br><br><br>
+    <div class="dNone" id="section_1">
+        <div class="pesquisa" id="pesquisa">
+            <h3>Pesquisar na Tabela:</h3>
+            <div class="areaPesquisa">
+                <input type="text" name="name" id="name">
+                <input type="text" name="rg" id="rg" placeholder="caso tenha nome repitido, insira o RG">
+                <button onclick=" buscaNome(document.getElementById('name').value)" >Pesquisar</button>
+               
+            </div>
+            <h3>Status da Busca:</h3>
+            <div class="filecontents" id="filecontentsBusca">
+            </div>
+        </div>
+        <br><br>
+        <div class="pesquisa" id="pesquisa">
+            <h3>Deleta na Tabela:</h3>
+            <div class="areaPesquisa">
+                <input type="text" name="name" id="nameDelete" disabled>
+                <input type="text" name="rg" id="rgDelete" disabled>
+                <button onclick=" deletaDados(document.getElementById('nameDelete').value, document.getElementById('rgDelete').value)" >Deletar</button>
+            </div>
+            <h3>Status da Delete:</h3>
+            <div class="filecontents" id="filecontentsDelete">
+            </div>
+        </div>
+        <h3>Tabela Hash Completa:</h3>
+        <div class="filecontents" id="filecontentsTableDelete">
+        </div>
+    </div>
+    <script src="function.js"></script>
+</body>
+</html>
